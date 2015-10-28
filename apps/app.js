@@ -31,9 +31,9 @@ function getRequest(searchTerm){
 function showResults(videos){
 	var html = "";
   
-  $.each(videos, function(index,video){
-  	html += "<div class='video-display'><p>" + video.snippet.title + "</p><a target='_blank' href='https://www.youtube.com/watch?v=" + video.id.videoId + "'><img width='320px' height='270px'src='" +  video.snippet.thumbnails.high.url + "'/></a></div>" ;
-    console.log(video.snippet.title);
+  $.each(videos, function(index,value){
+  	html += "<div class='video-display'><p>" + value.snippet.title + "</p><a target='_blank' href='https://www.youtube.com/watch?v=" + value.id.videoId + "'><img width='320px' height='270px'src='" +  value.snippet.thumbnails.high.url + "'/></a></div>" ;
+    console.log(value.snippet.title);
   });
 
 $('#search-results').html(html);
